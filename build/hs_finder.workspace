@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_file>
+	<Workspace title="Workspace">
+		<Project filename="hs_finder_shared.cbp" />
+		<Project filename="hs_finder_static.cbp" />
+		<Project filename="example1.cbp">
+			<Depends filename="hs_finder_shared.cbp" />
+		</Project>
+		<Project filename="hs_finder_count.cbp">
+			<Depends filename="hs_finder_shared.cbp" />
+		</Project>
+		<Project filename="hs_finder_replace.cbp">
+			<Depends filename="hs_finder_shared.cbp" />
+		</Project>
+	</Workspace>
+</CodeBlocks_workspace_file>

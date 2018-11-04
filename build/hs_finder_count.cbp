@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="hs_finder_count" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/hs_finder_count" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option parameters='-t &quot;This is a test, testing 123..., testing done&quot; -i -p test' />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add library="bin/Debug/libhs_finder.dll.a" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/hs_finder_count" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option parameters='-t &quot;This is a test, testing 123..., testing done&quot; -i -p test' />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="bin/Release/libhs_finder.dll.a" />
+				</Linker>
+			</Target>
+			<Target title="Debug32">
+				<Option output="bin/Debug32/hs_finder_count" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug32/" />
+				<Option type="1" />
+				<Option compiler="MINGW32" />
+				<Option parameters='-t &quot;This is a test, testing 123..., testing done&quot; -i -p test' />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add library="bin/Debug32/libhs_finder.dll.a" />
+				</Linker>
+			</Target>
+			<Target title="Release32">
+				<Option output="bin/Release32/hs_finder_count" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release32/" />
+				<Option type="1" />
+				<Option compiler="MINGW32" />
+				<Option parameters='-t &quot;This is a test, testing 123..., testing done&quot; -i -p test' />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="bin/Release32/libhs_finder.dll.a" />
+				</Linker>
+			</Target>
+			<Target title="Debug64">
+				<Option output="bin/Debug64/hs_finder_count" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug64/" />
+				<Option type="1" />
+				<Option compiler="MINGW64" />
+				<Option parameters='-t &quot;This is a test, testing 123... Testing done&quot; -i -p Test' />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add library="bin/Debug64/libhs_finder.dll.a" />
+				</Linker>
+			</Target>
+			<Target title="Release64">
+				<Option output="bin/Release64/hs_finder_count" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release64/" />
+				<Option type="1" />
+				<Option compiler="MINGW64" />
+				<Option parameters='-t &quot;This is a test, testing 123..., testing done&quot; -i -p test' />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="bin/Release64/libhs_finder.dll.a" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-DBUILD_HS_FINDER_STATIC" />
+			<Add directory="../include" />
+		</Compiler>
+		<Linker>
+			<Add library="hs" />
+		</Linker>
+		<Unit filename="../src/hs_finder_count.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
