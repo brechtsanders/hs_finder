@@ -71,7 +71,7 @@
 /*! \brief minor version number */
 #define HS_FINDER_VERSION_MINOR 1
 /*! \brief micro version number */
-#define HS_FINDER_VERSION_MICRO 2
+#define HS_FINDER_VERSION_MICRO 1
 /*! @} */
 
 /*! \cond PRIVATE */
