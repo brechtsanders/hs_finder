@@ -71,7 +71,7 @@
 /*! \brief minor version number */
 #define HS_FINDER_VERSION_MINOR 1
 /*! \brief micro version number */
-#define HS_FINDER_VERSION_MICRO 1
+#define HS_FINDER_VERSION_MICRO 2
 /*! @} */
 
 /*! \cond PRIVATE */
@@ -154,7 +154,7 @@ DLL_EXPORT_HS_FINDER void hs_finder_cleanup (struct hs_finder* finder);
  * \sa     hs_finder_initialize()
  * \sa     hs_finder_process()
  */
-DLL_EXPORT_HS_FINDER void hs_finder_add_expr (struct hs_finder* finder, char* expr, unsigned int flags, unsigned int id);
+DLL_EXPORT_HS_FINDER void hs_finder_add_expr (struct hs_finder* finder, const char* expr, unsigned int flags, unsigned int id);
 
 /*! \brief add search instance to hs_finder object
  * \param  finder          hs_finder object
