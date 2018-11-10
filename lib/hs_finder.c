@@ -76,7 +76,7 @@ DLL_EXPORT_HS_FINDER void hs_finder_cleanup (struct hs_finder* finder)
   }
 }
 
-DLL_EXPORT_HS_FINDER void hs_finder_add_expr (struct hs_finder* finder, char* expr, unsigned int flags, unsigned int id)
+DLL_EXPORT_HS_FINDER void hs_finder_add_expr (struct hs_finder* finder, const char* expr, unsigned int flags, unsigned int id)
 {
   if (expr)
     hyperscan_expr_list_add(finder->last->hyperscanexprlist, strdup(expr), flags, id);
