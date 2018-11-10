@@ -1,6 +1,11 @@
+0.1.1
+
+2018-11-10  Brecht Sanders  https://github.com/brechtsanders/
+
+  * fixed bug when hs_finder_add_instance() is not followed by hs_finder_add_expr()
+
 0.1.0
 
 2018-11-04  Brecht Sanders  https://github.com/brechtsanders/
 
   * initial release
-

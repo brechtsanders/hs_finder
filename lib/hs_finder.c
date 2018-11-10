@@ -105,6 +105,21 @@ DLL_EXPORT_HS_FINDER hs_error_t hs_finder_open (struct hs_finder* finder, search
   hs_error_t status;
   hs_compile_error_t *compile_err;
   struct hs_finder* current = finder;
+  //delete last instance if expression list is empty
+  if (hyperscan_expr_list_count(finder->last->hyperscanexprlist) == 0) {
+    struct hs_finder* current;
+    current = finder;
+    while (current) {
+      if (current->next == finder->last)
+        break;
+      current = current->next;
+    }
+    if (current) {
+      hs_finder_cleanup(finder->last);
+      current->next = NULL;
+      finder->last = current;
+    }
+  }
   while (current) {
     //set output function (daisy chain with next if not last in chain, otherwise set final output function)
     if (current->next) {
