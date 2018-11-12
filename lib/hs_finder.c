@@ -7,6 +7,9 @@
 #ifndef HS_MAX_BUFFER_SIZE
 #define HS_MAX_BUFFER_SIZE 1024
 #endif
+#if HS_MAX_BUFFER_SIZE == 0
+#undef HS_MAX_BUFFER_SIZE
+#endif
 
 DLL_EXPORT_HS_FINDER void hs_finder_get_version (int* pmajor, int* pminor, int* pmicro)
 {
@@ -164,6 +167,8 @@ DLL_EXPORT_HS_FINDER hs_error_t hs_finder_process (struct hs_finder* finder, con
 {
   hs_error_t status;
   size_t buflen;
+  if (datalen == 0)
+    return HS_SUCCESS;
 #ifdef HS_MAX_BUFFER_SIZE
   //flush buffer in case it gets too large
   if ((buflen = search_data_buffer_get_len(finder->searchdatabuffer)) + datalen > HS_MAX_BUFFER_SIZE)
