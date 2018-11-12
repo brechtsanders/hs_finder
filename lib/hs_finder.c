@@ -185,7 +185,7 @@ DLL_EXPORT_HS_FINDER hs_error_t hs_finder_process (struct hs_finder* finder, con
 
 DLL_EXPORT_HS_FINDER hs_error_t hs_finder_close (struct hs_finder* finder)
 {
-  hs_error_t status;
+  hs_error_t status = HS_SUCCESS;
   struct hs_finder* current = finder;
   while (current) {
     search_data_buffer_flush_remaining_fn(current->searchdatabuffer, current->outputfn, current->outputcallbackdata);
@@ -208,6 +208,11 @@ DLL_EXPORT_HS_FINDER hs_error_t hs_finder_close (struct hs_finder* finder)
 DLL_EXPORT_HS_FINDER size_t hs_finder_get_pos (struct hs_finder* finder)
 {
   return search_data_buffer_get_pos(finder->searchdatabuffer);
+}
+
+DLL_EXPORT_HS_FINDER const char* hs_finder_get_buf_at_pos (struct hs_finder* finder, size_t pos)
+{
+  return search_data_buffer_get_at_pos(finder->searchdatabuffer, pos);
 }
 
 DLL_EXPORT_HS_FINDER void* hs_finder_get_callbackdata (struct hs_finder* finder)

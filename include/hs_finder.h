@@ -216,12 +216,26 @@ DLL_EXPORT_HS_FINDER hs_error_t hs_finder_close (struct hs_finder* finder);
 /*! \brief get position in input data stream
  * \param  finder          hs_finder object
  * \return current position in input data stream
+ * \sa     hs_finder_match_fn
  * \sa     hs_finder_open()
  * \sa     hs_finder_process()
  * \sa     hs_finder_flush()
  * \sa     hs_finder_skip()
+ * \sa     hs_finder_get_buf_at_pos()
  */
 DLL_EXPORT_HS_FINDER size_t hs_finder_get_pos (struct hs_finder* finder);
+
+/*! \brief get buffer with data starting at position in input data stream
+ * \param  finder          hs_finder object
+ * \return current position in input data stream
+ * \sa     hs_finder_match_fn
+ * \sa     hs_finder_open()
+ * \sa     hs_finder_process()
+ * \sa     hs_finder_flush()
+ * \sa     hs_finder_skip()
+ * \sa     hs_finder_get_pos()
+ */
+DLL_EXPORT_HS_FINDER const char* hs_finder_get_buf_at_pos (struct hs_finder* finder, size_t pos);
 
 /*! \brief get callback data, to be used inside hs_finder_match_fn
  * \param  finder          hs_finder object
