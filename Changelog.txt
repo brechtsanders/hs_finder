@@ -2,6 +2,8 @@
 
 2018-11-12  Brecht Sanders  https://github.com/brechtsanders/
 
+  * added hs_finder_get_buf_at_pos()
+
 0.1.1
 
 2018-11-10  Brecht Sanders  https://github.com/brechtsanders/
